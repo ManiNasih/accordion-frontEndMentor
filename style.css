@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  font-family: 'Kumbh Sans', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  width: 1000px;
+  height: 530px;
+  background: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 15px;
+  transition: all ease .2s;
+}
+
+.img-side {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-pattern {
+  width: 700px;
+  position: absolute;
+  left: 2%;
+  top: 45%;
+  transform: translate(-50%, -50%)
+}
+
+.box {
+  width: 150px;
+  position: absolute;
+  left: 55%;
+  top: 78%;
+  transform: translate(-50%, -50%);
+}
+
+.content-side {
+  padding: 2.5rem 1.2rem;
+  overflow: auto;
+}
+
+.content-side h1 {
+  margin-bottom: 25px;
+}
+
+.accordion {
+  border: none;
+  background-color: transparent;
+  color: hsl(237, 12%, 33%);
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  font-size: 18px;
+  padding: 20px 0;
+  display: flex;
+  width: 100%;
+  text-align: left;
+  align-items: center;
+  justify-content: space-between;
+  transition: font-weight .5s ease;
+}
+
+.active {
+  font-weight: bold;
+  border-bottom: none;
+}
+
+.active svg {
+  transform: rotate(180deg);
+  transition: all .5s ease;
+}
+ 
+.panel {
+  color: hsl(240, 6%, 50%);
+  overflow: hidden;
+  max-height: 0;
+  transition: all .5s ease;
+}
+
+.panel p {
+  padding-bottom: 1rem;
+  font-size: 15px;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+@media screen and (max-width: 1064px) {
+  .wrapper {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .wrapper {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1.7fr;
+    width: 450px;
+    overflow: auto;
+  }
+
+  .content-side h1 {
+    text-align: center;
+  }
+
+  .bg-pattern {
+    width: 400px;
+    left: 50%;
+    top: -13%;
+  }
+
+  .box {
+    width: 100px;
+    left: 19%;
+    top: 25%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .wrapper {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .wrapper {
+    width: 320px;
+  }
+}
